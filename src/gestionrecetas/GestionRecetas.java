@@ -10,13 +10,46 @@ package gestionrecetas;
  */
 public class GestionRecetas {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
+  public static void main(String[] args) throws IOException {    
         
-        /* Prueba */
-        System.out.print(" ------ ");
+        if (leerReceta()){
+            System.out.println("Todos los ingrediente de la receta estan en la heladera!");
+        } else System.out.println("Algun ingrediente de la receta NO estan en la heladera!");
+          
+     } 
+    private static boolean leerReceta(){
+        try{	
+		String archivo = "receta.txt";
+		File f = new File(archivo);
+                Scanner sc = new Scanner(f);
+                
+                while (sc.hasNextLine()){                  
+                    String lineaDeReceta = sc.nextLine();
+                          
+                    if(buscarEnHeladera(lineaDeReceta)){
+                    }else return false;   
+                }                  
+            }catch (FileNotFoundException ex) {
+			System.out.println("El archivo no puede ser abierto/leido"+" " +ex.getMessage());
+		}
+    return true;                            
     }
-    
+
+    private static boolean buscarEnHeladera(String ingReceta){
+        try{	
+		String archivo = "heladera.txt";
+                File f = new File(archivo);
+		Scanner sc = new Scanner(f);
+                                      
+                while (sc.hasNextLine()){                  
+                    String estanteHeladera = sc.nextLine();
+                    
+                        if ((ingReceta).equals (estanteHeladera)) { 
+                        return true;}
+                                    }
+            }catch (FileNotFoundException ex) {
+			System.out.println("El archivo no puede ser abierto/leido"+" " +ex.getMessage());
+            }
+    return false; 
+    }  
 }
