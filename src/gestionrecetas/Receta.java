@@ -9,6 +9,7 @@ import java.util.List;
  * @author George
  */
 public class Receta {
+    /*
     private String nombre;
     List<String> ingredientes;
 
@@ -19,5 +20,5 @@ public class Receta {
 
     public String GetInfo(){
         return this.nombre;
-    }
+    }*/
 }
