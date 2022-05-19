@@ -10,36 +10,57 @@
 
 public class OrganizadorRecetas {
     
-     public static void buscarEnHeladera(){
+     public static boolean buscarEnHeladera(){
                                   
+        int entro=0;
+        int i;
+        int cant=0;
+        
         String[][] matrizReceta = new String[10][2];
         String[][] matrizHeladera = new String[10][2];
         
         matrizReceta = ServicioRecetas.receta();
         matrizHeladera = ServicioRecetas.heladera();
-       
-         
-        for (int i=0;i<10/*matrizReceta[i].length*/;i++)
-              
-            for(int x=0;x<10/*matrizHeladera[x].length*/;x++)
-                
-                if ((matrizReceta[i][1]).equals (matrizHeladera[x][1])) 
-                    
-                    if ((Float.valueOf(matrizHeladera[x][0])) >= (Float.valueOf(matrizReceta[i][0])))
-                      
-                      System.out.println("Existe "+matrizReceta[i][1]+" y alcanza para hacer la receta!");
-                    
-                    else System.out.println("NO existe "+matrizReceta[i][1]+" o NO alcanza para hacer la receta!");
         
-    }            
-            
+        
+         /* Para recorrer las matrices de Receta y Heladera que se trajeron de la clase ServicioRecetas.
+        
+         for (int a=0;a<matrizReceta.length;a++)
+            for (int b=0;(b<matrizReceta[a].length) && (matrizReceta[a][b] != null);b++)
+                System.out.println(matrizReceta[a][b]);
+        
+         for (int a=0;a<matrizHeladera.length;a++)
+            for (int b=0;b<(matrizHeladera[a].length) && (matrizHeladera[a][b] != null);b++)
+                System.out.println(matrizHeladera[a][b]);
+        */
+        
+        for (i=0;i<(matrizReceta.length);i++){
+              
+            for(int x=0;x<(matrizHeladera.length);x++)
+                
+                if ((matrizReceta[i][1] != null) && ((matrizReceta[i][1]).equals (matrizHeladera[x][1])) && ((Float.valueOf(matrizHeladera[x][0])) >= (Float.valueOf(matrizReceta[i][0])))){
+                    
+                    entro=entro+1;
+                                  
+                    } 
+                }
    
+    for (i=0;i<(matrizReceta.length);i++)
+        if(matrizReceta[i][1] != null)
+            cant=cant+1;
+   
+    if (entro == cant) 
+        return true;
+        else 
+        return false;
+      
+}
+    
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
      
-    public static void main(String[] args) throws IOException {
+public static void main(String[] args) throws IOException {
         
-        
-}
+    }
 
 }
