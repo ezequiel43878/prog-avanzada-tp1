@@ -4,6 +4,21 @@ import java.io.IOException;
 import java.util.Scanner;
 import java.util.*;
 
+/**
+ *
+ * @author George --------> Este es nuestro MAIN !!!
+ */
+public class GestionRecetas {
+
+    public static void main(String[] args){
+    
+        OrganizadorRecetas.buscarEnHeladera();
+        
+    }
+
+}
+
+/*
 public class GestionRecetas {
 
     public static void main(String[] args) throws IOException {    
@@ -50,3 +65,4 @@ public class GestionRecetas {
     return false; 
     }  
 }
+*/
