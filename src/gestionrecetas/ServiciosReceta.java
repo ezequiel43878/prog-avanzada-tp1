@@ -7,11 +7,10 @@ import javax.print.attribute.standard.PrinterIsAcceptingJobs;
 
 /**
  *
- * @author George
+ * @author George 	------>   ((( ACA ABRIMOS LOS ARCHIVOS Y LOS PASAMOS A LAS MATRICES )))
  */
 public class ServicioRecetas{
  
-    
     public static String[][] receta(){
         
         String[][] matrizReceta = new String[10][2];
@@ -27,19 +26,16 @@ public class ServicioRecetas{
                         String linea = sc.nextLine();
                         String[] parte = linea.split(";");
                     
-                            for (int j=0;j<matrizReceta[i].length;j++){
-                               
-                                if (j==0)
-                                    matrizReceta[i][j] = parte[0];
-                                else
-                                    matrizReceta[i][j] = parte[1];
+                        matrizReceta[i][0] = parte[0]; 
+                        matrizReceta[i][1] = parte[1];
+                        
                             }
                     }
-                }
-                /*
-                for (int i=0;i<matrix.length;++i)
-                    for (int j=0;j<matrix[i].length && (matrix[i][j] != null);++j)
-                        System.out.println("Posicion ["+i+"]["+j+"] "+matrix[i][j]); 
+                
+                /* Para recorrer la matriz de Receta y ver si se almaceno bien los valores.
+                for (int i=0;i<matrizReceta.length;++i)
+                    for (int j=0;j<matrizReceta[i].length;++j)
+                        System.out.println("Posicion receta ["+i+"]["+j+"] "+matrizReceta[i][j]); 
                 */
                                     
             }catch (FileNotFoundException ex) {
@@ -60,28 +56,25 @@ public class ServicioRecetas{
 		File f = new File(archivo);
                 Scanner sc = new Scanner(f);           
                 
-                for (int i=0;i<matrizHeladera.length && (sc.hasNextLine());i++){
+                for (int i=0;i<matrizHeladera.length /*&& (sc.hasNextLine())*/;i++){
                     
                     if (sc.hasNextLine()){ 
                     
                         String linea = sc.nextLine();
                         String[] parte = linea.split(";");
                     
-                            for (int j=0;j<matrizHeladera[i].length;j++){
-                               
-                                if (j==0)
-                                    matrizHeladera[i][j] = parte[0];
-                                else
-                                    matrizHeladera[i][j] = parte[1];
-                             
+                        matrizHeladera[i][0] = parte[0];
+                        matrizHeladera[i][1] = parte[1];
+     
                             }
                     }
-                }
-                /*
-                for (int i=0;i<matrix.length;++i)
-                    for (int j=0;j<matrix[i].length && (matrix[i][j] != null);++j)
-                        System.out.println("Posicion ["+i+"]["+j+"] "+matrix[i][j]);
-                 */                   
+                
+                /* Para recorrer la matriz de la Heladera y ver si se almaceno bien los valores.
+                for (int i=0;i<matrizHeladera.length;++i)
+                    for (int j=0;j<matrizHeladera[i].length;++j)
+                        System.out.println("Posicion heladera ["+i+"]["+j+"] "+matrizHeladera[i][j]); 
+                */
+                                  
             }catch (FileNotFoundException ex) {
 			System.out.println("El archivo no puede ser abierto/leido"+" " +ex.getMessage());
                                                }   
@@ -92,7 +85,8 @@ public class ServicioRecetas{
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
-        public static void main(String[] args) throws FileNotFoundException{
-        
-        }
+    public static void main(String[] args) throws FileNotFoundException{
+          
+	    
+    }
 }      
