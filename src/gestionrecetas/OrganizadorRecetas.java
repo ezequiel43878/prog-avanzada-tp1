@@ -5,7 +5,7 @@
 
 /**
  *
- * @author George
+ * @author George    ---->>>   ((( ACA COMPARAMOS LA RECETA CON LA HELADERA )))
  */
 
 public class OrganizadorRecetas {
