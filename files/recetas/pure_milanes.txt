@@ -1,0 +1,2 @@
+2,papa,1.5,kg
+4,carne,0.5,kg

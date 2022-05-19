@@ -1,0 +1,7 @@
+1,arroz,2,kg
+2,papa,1,kg
+3,huevos,3,unidades
+4,carne,2,kg
+5,harina,0.5,kg
+6,queso,0.2,kg
+7,tomate,2,unidades

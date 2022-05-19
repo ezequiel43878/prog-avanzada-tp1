@@ -1,0 +1,2 @@
+1,arroz,0.5,kg
+4,carne,1,kg
