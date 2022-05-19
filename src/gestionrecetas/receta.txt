@@ -1,0 +1,9 @@
+0.5;Cebolla
+0;Perejil
+5;Huevo
+1;Ajo
+0.5;Sal
+3;Tomate
+0;Pimienta
+1;Papa
+8;Zanahoria
