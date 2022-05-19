@@ -9,16 +9,6 @@ import java.util.List;
  * @author George
  */
 public class Receta {
-    /*
-    private String nombre;
-    List<String> ingredientes;
-
-    public Receta(String nombre, List<String> ingredientes){
-        this.nombre = nombre;
-        this.ingredientes = ingredientes;
-    }
-
-    public String GetInfo(){
-        return this.nombre;
-    }*/
+    
+    
 }
