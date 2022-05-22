@@ -1,3 +1,6 @@
+
+import java.io.IOException;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -5,12 +8,13 @@
 
 /**
  *
- * @author George    ---->>>   ((( ACA COMPARAMOS LA RECETA CON LA HELADERA )))
+ *          ((( ACA COMPARAMOS LA RECETA CON LA HELADERA )))
+ * 
  */
 
 public class OrganizadorRecetas {
     
-     public static boolean buscarEnHeladera(){
+     public static boolean buscarEnHeladera(String receta, String heladera){
                                   
         int entro=0;
         int i;
@@ -19,8 +23,8 @@ public class OrganizadorRecetas {
         String[][] matrizReceta = new String[10][2];
         String[][] matrizHeladera = new String[10][2];
         
-        matrizReceta = ServicioRecetas.receta();
-        matrizHeladera = ServicioRecetas.heladera();
+        matrizReceta = ServicioRecetas.receta(receta);
+        matrizHeladera = ServicioRecetas.heladera(heladera);
         
         
          /* Para recorrer las matrices de Receta y Heladera que se trajeron de la clase ServicioRecetas.
@@ -61,6 +65,8 @@ public class OrganizadorRecetas {
      
 public static void main(String[] args) throws IOException {
         
+        
     }
 
 }
+
