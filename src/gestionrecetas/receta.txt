@@ -7,3 +7,4 @@
 0;Pimienta
 1;Papa
 8;Zanahoria
+9;Choclo
