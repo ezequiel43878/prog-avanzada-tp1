@@ -5,6 +5,6 @@
 0.7;Sal
 1.2;Pimienta
 2;Cebolla
-2;Tomate
+9;Tomate
 4;Zapallito
 8;Zanahoria
