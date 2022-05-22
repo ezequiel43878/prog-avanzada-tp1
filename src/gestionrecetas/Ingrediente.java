@@ -5,7 +5,7 @@
 
 /**
  *
- * @author George
+ * 
  */
 public class Ingrediente {
     
