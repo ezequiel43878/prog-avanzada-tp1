@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  *
- * @author George
+ *
  */
 public class Receta {
     
