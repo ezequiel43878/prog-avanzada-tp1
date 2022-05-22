@@ -1,4 +1,7 @@
-import javax.print.attribute.standard.PrinterIsAcceptingJobs;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -7,16 +10,19 @@ import javax.print.attribute.standard.PrinterIsAcceptingJobs;
 
 /**
  *
- * @author George 	------>   ((( ACA ABRIMOS LOS ARCHIVOS Y LOS PASAMOS A LAS MATRICES )))
+ *       ((( ACA ABRIMOS LOS ARCHIVOS Y LOS PASAMOS A LAS MATRICES )))
+ * 
  */
 public class ServicioRecetas{
  
-    public static String[][] receta(){
+    
+    public static String[][] receta(String receta){
         
         String[][] matrizReceta = new String[10][2];
+        
         try{	
-                String archivo = "receta.txt";
-		File f = new File(archivo);
+        
+		File f = new File(receta);
                 Scanner sc = new Scanner(f);           
                 
                 for (int i=0;i<matrizReceta.length;i++){
@@ -47,13 +53,13 @@ public class ServicioRecetas{
         
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
-    public static String[][] heladera(){
+    public static String[][] heladera(String heladera){
         
         String[][] matrizHeladera = new String[10][2];
+        
       try{	
-                
-		String archivo = "heladera.txt";
-		File f = new File(archivo);
+             
+		File f = new File(heladera);
                 Scanner sc = new Scanner(f);           
                 
                 for (int i=0;i<matrizHeladera.length /*&& (sc.hasNextLine())*/;i++){
@@ -86,7 +92,7 @@ public class ServicioRecetas{
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
     public static void main(String[] args) throws FileNotFoundException{
-          
-	    
-    }
+            
+      
+        }
 }      
